@@ -1,128 +1,104 @@
 <!-- 
-PPA Project - Elite Squad
-Vehicle Repair Management System Website -->
+PPA Project - Amigos
+Online Ordering System Website -->
 
-<?php
-session_start();
-error_reporting(0);
-include('includes/dbconnection.php');
-
-if(isset($_POST['login']))
-  {
-    $emailcon=$_POST['emailcont'];
-    $password=md5($_POST['password']);
-    $query=mysqli_query($con,"select ID from tbluser where  (Email='$emailcon' || MobileNo='$emailcon') && Password='$password' ");
-    $ret=mysqli_fetch_array($query);
-    if($ret>0){
-      $_SESSION['sid']=$ret['ID'];
-     header('location:welcome.php');
-    }
-    else{
-    $msg="Invalid Details.";
-    }
-  }
-  ?>
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>VSMS | Login</title>
-        <!-- App css -->
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
-        <script src="../assets/js/modernizr.min.js"></script>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Raj Pharmarcy Order System</title>
+        
+        <link rel="icon" type="image/x-icon" href="" />
+        
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.php">Raj Pharmarcy </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="user/register.php">Customer Sign up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user/index.php">Customer Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="admin/index.php">Admin Panel</a></li>
 
-
-    <body class="account-pages">
-
-        <!-- Begin page -->
-        <div class="accountbg" style="background: url('../assets/images/bg-2.jpg');background-size: cover;background-position: center; border:solid 1px;"></div>
-
-        <div class="wrapper-page account-page-full">
-
-            <div class="card">
-                <div class="card-block">
-
-                    <div class="account-box">
-
-                        <div class="card-box p-5">
-                            <h3 class="text-uppercase text-center pb-4">
-                                <a href="../index.php" ><span>VRMS | CUSTOMER Login</span></a>
-                            </h3>
-                            <hr color="#000" />
-                            <p style="font-size:16px; color:red" align="center"> <?php if($msg){
-    echo $msg;
-  }  ?> </p>
-
-                            <form class="" action="#" name="login" method="post">
-
-                                <div class="form-group m-b-20 row">
-                                    <div class="col-12">
-                                        <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="text" id="email" name="emailcont" required="" placeholder="Registered Email or Contact Number">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row m-b-20">
-                                    <div class="col-12">
-                                        <a href="forget-password.php" class="text-muted float-right"><small>Forgot your password?</small></a>
-                                        <label for="password">Password</label>
-                                        <input class="form-control" type="password" required="" id="password" name="password" placeholder="Enter your password">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row m-b-20">
-                                    <div class="col-12">
-
-                                        
-
-                                    </div>
-                                </div>
-
-                                <div class="form-group row text-center m-t-10">
-                                    <div class="col-12">
-                                        <button class="btn btn-block btn-custom waves-effect waves-light" type="submit" name="login">Sign In</button>
-                                    </div>
-                                </div>
-
-                            </form>
-
-                            <div class="row m-t-50">
-                                <div class="col-sm-12 text-center">
-                                    <p class="text-muted">Don't have an account? <a href="register.php" class="text-dark m-l-5"><b>Register with us Now!</b></a></p>
-                                </div>
-                            </div>
-
-                        </div>
+                    </ul>
+                </div>
+          </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">All Your Medical Needs Within Your Reach</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">What We Provide&nbsp;</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services We Provide</h2>
+                    <h3 class="section-subheading text-muted">Our Pharmarcy is your trusted source of pharmaceutical services and products.We have what you are looking for...</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-square fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Online Ordering</h4>
+                
                     </div>
-
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-square fa-stack-2x text-primary"></i>
+                            <i class="fas fa-box fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Order Tracking</h4>
+        
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-square fa-stack-2x text-primary"></i>
+                            <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Fast Delivery</h4>
+                      
+                    </div>
                 </div>
             </div>
-
-            <div class="m-t-40 text-center">
-                <p class="account-copyright"><?php echo date('Y');?> © Elite Squad - Vehicle Repair Management System</p>
+        </section>
+    
+  
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <a>© Raj Pharmarcies - Online Ordering System  |  @Amigos</a>
+            
+                </div>
             </div>
+        </footer>
+        <!-- Portfolio Modals-->
 
-        </div>
-
-
-
-        <!-- jQuery  -->
-        <script src="../assets/js/jquery.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/js/metisMenu.min.js"></script>
-        <script src="../assets/js/waves.js"></script>
-        <script src="../assets/js/jquery.slimscroll.js"></script>
-
-        <!-- App js -->
-        <script src="../assets/js/jquery.core.js"></script>
-        <script src="../assets/js/jquery.app.js"></script>
-
+      
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
