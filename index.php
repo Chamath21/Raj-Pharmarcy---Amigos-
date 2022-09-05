@@ -1,6 +1,8 @@
 <!-- 
 PPA Project - Amigos
-Online Ordering System Website -->
+Online Ordering System Website 
+Home Page
+-->
 
 <!DOCTYPE html>
 <html lang="en">
