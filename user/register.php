@@ -1,6 +1,8 @@
 <!-- 
 PPA Project - Amigos
-Online Ordering System Website -->
+Online Ordering System Website 
+Registeration page for customers
+-->
 
 <?php 
 session_start();
