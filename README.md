@@ -1,2 +1,2 @@
 # Raj-Pharmarcy---Amigos-
-This project is undergoing for the PPA module of SLIIT ACADEMY.
+This project is undergoing for the PPA module on SLIIT ACADEMY.
