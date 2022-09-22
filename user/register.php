@@ -1,8 +1,6 @@
 <!-- 
 PPA Project - Amigos
-Online Ordering System Website 
-Registeration page for customers
--->
+Online Ordering System Website -->
 
 <?php 
 session_start();
@@ -23,7 +21,7 @@ $msg="This email or Contact Number is already been used in another account";
     else{
     $query=mysqli_query($con, "insert into tbluser(FullName, MobileNo, Email,  Password) value('$fname', '$mobno', '$email', '$password' )");
     if ($query) {
-    $msg="You have successfully registered";
+    $msg="You have successfully registered on Raj Pharmarcies";
   }
   else
     {
