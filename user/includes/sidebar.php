@@ -24,7 +24,7 @@ $name=$row['FullName'];
 
 ?>
                         <h5><?php echo $name; ?></a> </h5>
-                        <p class="text-muted">VRMS User</p>
+                        <p class="text-muted">User</p>
                     </div>
 
                     <!--- Sidemenu -->
@@ -41,19 +41,19 @@ $name=$row['FullName'];
                             </li>
 
                             <li>
-                                <a href="javascript: void(0);"><i class="fi-layers"></i><span> Repair Enquiry </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"><i class="fi-layers"></i><span> Order Enquiry </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="enquiry-request.php">Enquiry Form</a></li>
+                                    <li><a href="enquiry-request.php">Order Form</a></li>
                                     <li><a href="enquiry-history.php">Your Enquiry History</a></li>
                                 </ul>
                             </li>
 
           
 <li>
-                                <a href="javascript: void(0);"><i class="fi-layers"></i><span> Repair Request </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"><i class="fi-layers"></i><span> Order Request </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="service-request.php">Repair Request Form</a></li>
-                                    <li><a href="service-history.php">Repair History</a></li>
+                                    <li><a href="order-request.php">Order Request Form</a></li>
+                                    <li><a href="order-history.php">Order History</a></li>
                                 </ul>
                             </li>
                                              

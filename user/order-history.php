@@ -1,6 +1,6 @@
 <!-- 
 PPA Project - Amigos
-Online Ordering System -->
+Online Ordering System  -->
 
 <?php  
 session_start();
@@ -16,7 +16,7 @@ if (strlen($_SESSION['sid']==0)) {
 
     <head>
         <meta charset="utf-8" />
-        <title>Online Ordering System </title>
+        <title>Online Ordering System</title>
         <!-- App css -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
@@ -29,16 +29,14 @@ if (strlen($_SESSION['sid']==0)) {
 
     <body>
 
-		<div class="accountbg" style="background: url('../assets/images/enquiry-history.jpg');background-size: cover;background-position: center;"></div>
+		<div class="accountbg" style="background: url('../assets/images/order-history.jpg');background-size: cover;background-position: center;"></div>
 		
         <!-- Begin page -->
         <div id="wrapper">
 
           <?php include_once('includes/sidebar.php');?>
 
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
+            
 
             <div class="content-page">
 
@@ -51,7 +49,7 @@ if (strlen($_SESSION['sid']==0)) {
                         <div class="row">
                             <div class="col-12">
                                 <div class="card-box">
-                                    <h4 class="m-t-0 header-title">Enquiry History</h4>
+                                    <h4 class="m-t-0 header-title">Order History</h4>
                                     <p class="text-muted m-b-30 font-14">
                                        
                                     </p>
@@ -63,16 +61,17 @@ if (strlen($_SESSION['sid']==0)) {
 <table class="table table-bordered mg-b-0">
               <thead>
                 <tr>
-                  <th>S.NO</th>
-                  <th>Enquiry Number</th>
-                                   <th>Enquiry Date</th>
-                   <th>Action</th>
+                  <th>No</th>
+                  <th>Category</th>
+                  <th>Order Info</th>
+                   <th>Order Request Date</th>
+                   <th>Status</th>
                 </tr>
               </thead>
               <?php
-              $enid=$_SESSION['sid'];
-              $rno=mt_rand(10000,99999);
-$ret=mysqli_query($con,"select * from  tblenquiry where UserId=$enid");
+              $tid=$_SESSION['sid'];
+              $rno=mt_rand(1000,9999);
+$ret=mysqli_query($con,"select * from  tblorderrequest where UserId=$tid");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
@@ -80,9 +79,11 @@ while ($row=mysqli_fetch_array($ret)) {
               <tbody>
                 <tr>
                   <td><?php echo $cnt;?></td>
-                <td><?php  echo $row['EnquiryNumber'];?></td>
-                <td><?php  echo $row['EnquiryDate'];?></td>
-<td><a href="enquiry-view.php?ticid=<?php echo base64_encode($row['ID'].$rno);?>">View Detail</a></td>
+                       <td><?php  echo $row['Category'];?></td>
+                  <td><?php  echo $row['OrderDetails'];?></td>
+                  <td><?php  echo $row['OrderrequestDate'];?></td>
+         
+                  <td><a href="order-view.php?srid=<?php echo base64_encode($row['ID'].$rno);?>">View Details</a>
                 </tr>
                 <?php 
 $cnt=$cnt+1;
@@ -91,11 +92,18 @@ $cnt=$cnt+1;
               </tbody>
             </table>
 
-</div>
+
+                                                
+                                            </div>
+                                        
+
+                                    
+                                    <!-- end row -->
 
                                 </div> <!-- end card-box -->
                             </div><!-- end col -->
                         </div>
+
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -104,7 +112,6 @@ $cnt=$cnt+1;
             </div>
 
         </div>
-        <!-- END wrapper -->
 
 </div>
 </div>
@@ -113,9 +120,8 @@ $cnt=$cnt+1;
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/metisMenu.min.js"></script>
-        <script src="../assets/js/waves.js"></script>
+        <script src="..assets/js/waves.js"></script>
         <script src="../assets/js/jquery.slimscroll.js"></script>
-
         <!-- App js -->
         <script src="../assets/js/jquery.core.js"></script>
         <script src="../assets/js/jquery.app.js"></script>

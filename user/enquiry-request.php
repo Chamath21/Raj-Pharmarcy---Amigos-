@@ -61,7 +61,9 @@ echo "<script>alert('Your enquiry is under review.');</script>";
 
     <body>
 
-        <!-- Begin page -->
+        <div class="accountbg" style="background: url('../assets/images/enquiry.jpg');background-size: cover;background-position: center;"></div>
+		
+		<!-- Begin page -->
         <div id="wrapper">
 
           <?php include_once('includes/sidebar.php');?>

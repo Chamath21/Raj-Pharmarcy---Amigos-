@@ -35,6 +35,8 @@ if (strlen($_SESSION['sid']==0)) {
 
     <body>
 
+		<div class="accountbg" style="background: url('../assets/images/enquiry-view.jpg');background-size: cover;background-position: center;"></div>
+		
         <!-- Begin page -->
         <div id="wrapper">
 

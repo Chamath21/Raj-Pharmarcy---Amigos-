@@ -67,9 +67,11 @@ return true;
 
 
     <body class="account-pages">
+		
+		<div class="accountbg" style="background: url('../assets/images/Signup-background.jpg');background-size: cover;background-position: center;"></div>
 
         <!-- Begin page -->
-        <div class="accountbg" style="background: url('../assets/images/Signup-background.jpg');background-position: center; height: 750px;"></div>
+        
 
         <div class="wrapper-page account-page-full">
 
@@ -93,8 +95,8 @@ return true;
 
                                 <div class="form-group row m-b-20">
                                     <div class="col-12">
-                                        <label for="username">Full Name</label>
-                                        <input class="form-control" type="text" id="fullname"name="fullname" required=""  placeholder=" Full Name Here" pattern="[A-Za-z]+" title="This field can only contain A-Z letters">
+                                        <label for="username">First Name</label>
+                                        <input class="form-control" type="text" id="fullname"name="fullname" required=""  placeholder=" Full Name Here">
                                     </div>
                                 </div>
 

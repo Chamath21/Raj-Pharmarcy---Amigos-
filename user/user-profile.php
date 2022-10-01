@@ -44,6 +44,8 @@ if(isset($_POST['submit']))
 
     <body>
 
+		<div class="accountbg" style="background: url('../assets/images/my-profile.jpg');background-size: cover;background-position: center;"></div>
+		
         <!-- Begin page -->
         <div id="wrapper">
 

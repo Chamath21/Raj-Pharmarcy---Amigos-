@@ -46,6 +46,8 @@ if(isset($_POST['submit']))
 
 
     <body class="account-pages">
+		
+		<div class="accountbg" style="background: url('../assets/images/forgot-password.jpg');background-size: cover;background-position: center;"></div>
 
         <!-- Begin page -->
         <div class="accountbg" style="background: url('../assets/images/bg-1.jpg');background-size: cover;background-position: center;"></div>

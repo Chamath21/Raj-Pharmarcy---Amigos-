@@ -1,15 +1,15 @@
 <!-- 
-PPA Project - Elite Squad
-Vehicle Repair Management System Website -->
+PPA Project - Amigos
+Online Ordering System -->
 
 
 
 <?php
 
-$hostname = "us-cdbr-east-05.cleardb.net";
-$username = "be3f3caab396e7";
-$password = "ac56655c";
-$db = "heroku_dc6170e48d9001f";
+$hostname = "localhost";
+$username = "root@";
+$password = "";
+$db = "raj pharmarcy";
 
 $con = mysqli_connect($hostname, $username, $password, $db); 
 	if (!$con) {

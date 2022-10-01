@@ -18,7 +18,7 @@ if (strlen($_SESSION['sid']==0)) {
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>VSMS</title>
+        <title>RAJ Pharmarcy</title>
         <!-- App css -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
@@ -30,6 +30,8 @@ if (strlen($_SESSION['sid']==0)) {
 
 
     <body>
+		
+		<div class="accountbg" style="background: url('../assets/images/welcome.jpg');background-size: cover;background-position: center;"></div>
 
      <div id="wrapper">
 
@@ -54,7 +56,7 @@ if (strlen($_SESSION['sid']==0)) {
                         <div class="row">
                             <div class="col-12">
                                 <div class="card-box">
-                                    <h4 class="header-title mb-4">Welcome Back to VRMS User panel !</h4>
+                                    <h4 class="header-title mb-4">Welcome to Raj Pharmarcy User panel !</h4>
 
                                     <div class="row">
                                        
@@ -62,7 +64,7 @@ if (strlen($_SESSION['sid']==0)) {
             <div class="col-sm-6 col-lg-6 col-xl-3">
                                             <div class="card-box mb-0 widget-chart-two">
                                                 <div class="float-right">
-<?php $query3=mysqli_query($con,"Select ID from tblservicerequest where UserId='$uid'");
+<?php $query3=mysqli_query($con,"Select ID from tblorderrequest where UserId='$uid'");
 $sercount=mysqli_num_rows($query3);?>
   <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
    data-fgColor="#2d7bf4" value="<?php echo $sercount;?>" data-skin="tron" data-angleOffset="180"
@@ -70,7 +72,7 @@ $sercount=mysqli_num_rows($query3);?>
 </div>
 
 <div class="widget-chart-two-content">
-<p class="text-muted mb-0 mt-2">Total Repair Requests</p>
+<p class="text-muted mb-0 mt-2">Total Order Requests</p>
 </div>
 </div></div>
 
@@ -82,11 +84,11 @@ $sercount=mysqli_num_rows($query3);?>
 <?php 
 $uid=$_SESSION['sid'];
 
-$query31=mysqli_query($con,"Select ID from tblservicerequest where AdminStatus is null and  UserId='$uid'");
+$query31=mysqli_query($con,"Select ID from tblorderrequest where AdminStatus is null and  UserId='$uid'");
 $newrequest=mysqli_num_rows($query31);
 ?>
 <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#2d7bf4" value="<?php echo $newrequest;?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".2"/></div>
-<p class="text-muted mb-0 mt-2">New Repair Requests</p>
+<p class="text-muted mb-0 mt-2">New Order Requests</p>
 </div>
 
 </div>
@@ -98,14 +100,14 @@ $newrequest=mysqli_num_rows($query31);
 <div class="col-sm-6 col-lg-6 col-xl-3">
 <div class="card-box mb-0 widget-chart-two">
 <div class="float-right">
-<?php $query32=mysqli_query($con,"Select ID from tblservicerequest where AdminStatus='2' and  UserId='$uid' ");
+<?php $query32=mysqli_query($con,"Select ID from tblorderrequest where AdminStatus='2' and  UserId='$uid' ");
 $rejectedrequest=mysqli_num_rows($query32);
 ?>
 <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
 data-fgColor="#f1556c" value="<?php echo $rejectedrequest;?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".2"/></div>
                                                
 <div class="widget-chart-two-content">
-<p class="text-muted mb-0 mt-2">Rejected Repair Requests</p>
+<p class="text-muted mb-0 mt-2">Rejected Order Requests</p>
 </div>
 </div></div>
 
@@ -113,7 +115,7 @@ data-fgColor="#f1556c" value="<?php echo $rejectedrequest;?>" data-skin="tron" d
 <div class="col-sm-6 col-lg-6 col-xl-3">
 <div class="card-box mb-0 widget-chart-two">
 <div class="float-right">
- <?php $query33=mysqli_query($con,"Select ID from tblservicerequest where AdminStatus='3' and  UserId='$uid' ");
+ <?php $query33=mysqli_query($con,"Select ID from tblorderrequest where AdminStatus='3' and  UserId='$uid' ");
 $compsercount=mysqli_num_rows($query33);
 ?>
 <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
@@ -121,7 +123,7 @@ data-fgColor="#0acf97" value="<?php echo $compsercount;?>" data-skin="tron" data
 </div>
 
 <div class="widget-chart-two-content">
-<p class="text-muted mb-0 mt-2">Completed Repairs </p>
+<p class="text-muted mb-0 mt-2">Completed Orders </p>
 </div>
 </div></div>
 

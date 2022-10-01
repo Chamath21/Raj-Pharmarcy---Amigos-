@@ -63,6 +63,9 @@ return true;
     </head>
 
     <body>
+		
+		<div class="accountbg" style="background: url('../assets/images/change-password.jpg');background-size: cover;background-position: center;"></div>
+		
         <!-- Begin page -->
         <div id="wrapper">
           <?php include_once('includes/sidebar.php');?>
