@@ -43,7 +43,7 @@ if (strlen($_SESSION['adid']==0)) {
                                     <h4 class="m-t-0 header-title">Search Enquiries</h4>
                                    
 <div class="form-group row">
-<label class="col-4 col-form-label" for="example-email">Search by Name / Email id / Contact number:</label>
+<label class="col-4 col-form-label" for="example-email">Search Here:</label>
 <div class="col-6">
 <input id="searchdata" type="text" name="searchdata" required class="form-control">
 </div>

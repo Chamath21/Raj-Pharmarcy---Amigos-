@@ -1,6 +1,6 @@
 <!-- 
-PPA Project - Elite Squad
-Vehicle Repair Management System Website -->
+PPA Project - Amigos
+Online Ordering System  -->
 
 <?php
 session_start();
@@ -35,7 +35,7 @@ if(isset($_POST['submit']))
 
     <head>
         <meta charset="utf-8" />
-        <title>VSMS | Forget Password</title>
+        <title>Forgot Your Password?</title>
         <!-- App css -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
@@ -51,7 +51,7 @@ if(isset($_POST['submit']))
 
 		
         <!-- Begin page -->
-        <div class="accountbg" style="background: url('assets/images/bg-1.jpg');background-size: cover;background-position: center;"></div>
+        <div class="accountbg" style="background: url('assets/images/3506328.jpg');background-size: cover;background-position: center;"></div>
 
         <div class="wrapper-page account-page-full">
 
@@ -63,7 +63,7 @@ if(isset($_POST['submit']))
                         <div class="card-box p-5">
                             <h3 class="text-uppercase text-center pb-4">
                                 <a href="index.php">
-                                    <span>VSMS | Recover Password</span>
+                                    <span>Recover your Password</span>
                                 </a>
                             </h3>
                             <hr  color="#000"/>
@@ -75,7 +75,7 @@ if(isset($_POST['submit']))
                                 <div class="form-group m-b-20 row">
                                     <div class="col-12">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="email" id="email" name="email" required="" placeholder="Registered Email">
+                                        <input class="form-control" type="email" id="email" name="email" required="" placeholder="Enter Your Email">
                                     </div>
                                 </div>
 
@@ -91,7 +91,7 @@ if(isset($_POST['submit']))
 
                                 <div class="form-group row text-center m-t-10">
                                     <div class="col-12">
-                                        <button class="btn btn-block btn-custom waves-effect waves-light" type="submit" name="submit">Reset</button>
+                                        <button class="btn btn-block btn-custom waves-effect waves-light" type="submit" name="submit">Reset Password</button>
                                     </div>
                                 </div>
 
@@ -99,7 +99,7 @@ if(isset($_POST['submit']))
 
                             <div class="row m-t-50">
                                 <div class="col-sm-12 text-center">
-                                    <p class="text-muted">Go Back To Sign In!!  <a href="index.php" class="text-dark m-l-5"><b>Sign In</b></a></p>
+                                    <p class="text-muted">Go Back To <a href="index.php" class="text-dark m-l-5"><b>Sign In</b></a></p>
                                 </div>
                             </div>
 
@@ -110,7 +110,7 @@ if(isset($_POST['submit']))
             </div>
 
             <div class="m-t-40 text-center">
-                <p class="account-copyright"><?php echo date("Y");?> © Vehicle Service Managment System</p>
+                <p class="account-copyright"><?php echo date("Y");?> © Online Ordering System</p>
             </div>
 
         </div>

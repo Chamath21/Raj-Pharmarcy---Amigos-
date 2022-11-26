@@ -44,163 +44,16 @@ header('location:logout.php');
                                 <div class="card-box">
                                     <h4 class="header-title mb-4">RAJ Pharmarcy || Online Ordering System</h4>
 
-                                    <div class="row">
-                                        <div class="col-sm-6 col-lg-6 col-xl-3">
-                                            <div class="card-box mb-0 widget-chart-four">
-                                                <div class="float-right">
- <?php $query=mysqli_query($con,"Select * from tbluser");
-$usercount=mysqli_num_rows($query);
-?>
 
-<input data-plugin="knob" data-width="80" data-height="80" data-linecap=square
-data-fgColor="#2d7bf4" value="<?php echo $usercount;?>" data-skin="tron" data-angleOffset="180"
- data-readOnly=true data-thickness=".5"/>
-                                                </div>
-                                                <div class="widget-chart-two-content">
-
-                                                    <p class="text-muted mb-0 mt-2">Total Registered Customers</p>
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6 col-lg-6 col-xl-3">
-                                            <div class="card-box mb-0 widget-chart-two">
-                                                <div class="float-right">
-                                                    <?php $query1=mysqli_query($con,"Select * from tblenquiry");
-$enqcount=mysqli_num_rows($query1);
-?>
-                                                    <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-                                                           data-fgColor="#2d7bf4" value="<?php echo $enqcount;?>" data-skin="tron" data-angleOffset="180"
-                                                           data-readOnly=true data-thickness=".2"/>
-                                                </div>
-                                                <div class="widget-chart-two-content">
-                                                    <p class="text-muted mb-0 mt-2">Total Repair Enquiries</p>
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-<div class="col-sm-6 col-lg-6 col-xl-3">
-<div class="card-box mb-0 widget-chart-two">
-<div class="float-right">
-<?php $query2=mysqli_query($con,"Select * from tblcourier");
-$ccount=mysqli_num_rows($query2);
-?>
-                                                    <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-                                                           data-fgColor="#2d7bf4" value="<?php echo $ccount;?>" data-skin="tron" data-angleOffset="180"
-                                                           data-readOnly=true data-thickness=".2"/>
-                                                </div>
-                                                <div class="widget-chart-two-content">
-                                                    <p class="text-muted mb-0 mt-2">Courier Partners</p>
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6 col-lg-6 col-xl-3">
-                                            <div class="card-box mb-0 widget-chart-two">
-                                                <div class="float-right">
-                                                    <?php $query3=mysqli_query($con,"Select * from tblorderrequest");
-$ordercount=mysqli_num_rows($query3);
-?>
-                                                    <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-                                                           data-fgColor="#2d7bf4" value="<?php echo $ordercount;?>" data-skin="tron" data-angleOffset="180"
-                                                           data-readOnly=true data-thickness=".2"/>
-                                                </div>
-                                                <div class="widget-chart-two-content">
-                                                    <p class="text-muted mb-0 mt-2">Total Order Requests</p>
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-  
+<br>
+<br>
+<br>
 
 
+<h4 class="header-title mb-4">Welcome to the Admin panel, hope you're having a wonderful day.</h4>
+<h4 class="header-title mb-4">Please navigate yourself through the side bar to see view and manage any orders, couriers, enquiries and customer details.</h4>
 
-                                    </div>
-                                    <!-- end row -->
-
-
-
-   <div class="row">
-                                     
-
-                         
-
-                       
-
-                                        <div class="col-sm-6 col-lg-6 col-xl-3">
-                                            <div class="card-box mb-0 widget-chart-two">
-                                                <div class="float-right">
-<?php $query31=mysqli_query($con,"Select * from tblorderrequest where AdminStatus is null");
-$neworderrequest=mysqli_num_rows($query31);
-?>
-                                                    <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-                                                           data-fgColor="#2d7bf4" value="<?php echo $neworderrequest;?>" data-skin="tron" data-angleOffset="180"
-                                                           data-readOnly=true data-thickness=".2"/>
-                                                </div>
-                                                <div class="widget-chart-two-content">
-                                                    <p class="text-muted mb-0 mt-2">New Order Requests</p>
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-
-<div class="col-sm-6 col-lg-6 col-xl-3">
-                                            <div class="card-box mb-0 widget-chart-two">
-                                                <div class="float-right">
- <?php $query33=mysqli_query($con,"Select * from tblorderrequest where AdminStatus='3'");
-$completedordercount=mysqli_num_rows($query33);
-?>
-                                                <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-                                                           data-fgColor="#2d7bf4" value="<?php echo $completedordercount;?>" data-skin="tron" data-angleOffset="180"
-                                                           data-readOnly=true data-thickness=".2"/>
-                                                </div>
-                                                <div class="widget-chart-two-content">
-
-                                                    <p class="text-muted mb-0 mt-2">Completed Orders </p>
-                                                    
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-
-
-
-
-
-
-
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
-
-
-
-                       
-                        <!-- end row -->
-
-
-                        
-                        <!-- end row -->
-
+                                    
 
 
 

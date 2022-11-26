@@ -48,10 +48,10 @@ if (strlen($_SESSION['adid']==0)) {
                         <div class="row">
                             <div class="col-12">
                                 <div class="card-box">
-                                    <h4 class="m-t-0 header-title">Search Orders</h4>
+                                    <h4 class="m-t-0 header-title">Search Orders:</h4>
                                    
         <div class="form-group row">
-        <label class="col-4 col-form-label" for="example-email">Search by Name</label>
+        <label class="col-4 col-form-label" for="example-email">Search Here</label>
           <div class="col-6">
          <input id="searchdata" type="text" name="searchdata" required class="form-control">
           </div></div> 

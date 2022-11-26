@@ -56,7 +56,7 @@ if (strlen($_SESSION['adid']==0)) {
                                                <table class="table mb-0">
  <thead>
                 <tr>
-                  <th>S.NO</th>
+                  <th>NO</th>
                   <th>Enquiry Type</th>
                   <th>Enquiry Number</th>
                   <th>Full Name</th>

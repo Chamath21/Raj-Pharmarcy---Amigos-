@@ -1,6 +1,6 @@
 <!-- 
-PPA Project - Elite Squad
-Vehicle Repair Management System Website -->
+PPA Project - Amigos
+Online Ordering System -->
 
 <?php
 session_start();
@@ -135,7 +135,7 @@ if($row['AdminStatus']=="1")
 <form name="submit" method="post" enctype="multipart/form-data"> 
 
 <tr>
-    <th>Admin Response :</th>
+    <th>Admin Notes :</th>
     <td>
     <textarea name="adminresponse" placeholder="" rows="12" cols="14" class="form-control wd-450" required="true"></textarea></td>
    </tr>
@@ -146,7 +146,8 @@ if($row['AdminStatus']=="1")
     <th>Admin Status :</th>
     <td>
    <select name="status" class="form-control wd-450" required="true" >
-     <option value="1" selected="true">Responded</option>
+     	<option value="0" selected="true">Not Responded</option>
+	<option value="1" selected="true">Responded</option>
    
    </select></td>
   </tr>

@@ -1,6 +1,6 @@
 <!-- 
-PPA Project - Elite Squad
-Vehicle Repair Management System Website -->
+PPA Project - Amigos
+Online Ordering System -->
 
 <?php 
 session_start();
