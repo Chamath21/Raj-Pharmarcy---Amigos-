@@ -64,7 +64,7 @@ if (strlen($_SESSION['sid']==0)) {
                   <th>No</th>
                   <th>Category</th>
                   <th>Order Info</th>
-                   <th>Order Request Date</th>
+                   <th>Order Submitted Date And Time</th>
                    <th>Status</th>
                 </tr>
               </thead>

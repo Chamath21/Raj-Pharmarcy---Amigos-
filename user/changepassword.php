@@ -1,24 +1,24 @@
 <!-- 
-PPA Project - Elite Squad
-Vehicle Repair Management System Website -->
+PPA Project - Amigos
+Online Ordering System -->
 
 <?php
-session_start();
+session_start(); //session starts
 error_reporting(0);
-include('includes/dbconnection.php');
+include('includes/dbconnection.php'); //includes database
 error_reporting(0);
 if (strlen($_SESSION['sid']==0)) {
-  header('location:logout.php');
+  header('location:logout.php'); 
   } else{
 if(isset($_POST['submit']))
 {
 $userid=$_SESSION['sid'];
 $cpassword=md5($_POST['currentpassword']);
 $newpassword=md5($_POST['newpassword']);
-$query=mysqli_query($con,"select ID from tbluser where ID='$userid' and   Password='$cpassword'");
+$query=mysqli_query($con,"select ID from tbluser where ID='$userid' and   Password='$cpassword'"); //selects user id and password from database tbluser
 $row=mysqli_fetch_array($query);
 if($row>0){
-$ret=mysqli_query($con,"update tbluser set Password='$newpassword' where ID='$userid'");
+$ret=mysqli_query($con,"update tbluser set Password='$newpassword' where ID='$userid'"); //update the new password in the database
 $msg= "Your password successully changed"; 
 } else {
 
@@ -50,7 +50,7 @@ $msg="Your current password is wrong";
 <script type="text/javascript">
 function checkpass()
 {
-if(document.changepassword.newpassword.value!=document.changepassword.confirmpassword.value)
+if(document.changepassword.newpassword.value!=document.changepassword.confirmpassword.value)  //function to check the new password is same in both password fields
 {
 alert('New Password and Confirm Password field does not match');
 document.changepassword.confirmpassword.focus();
@@ -64,14 +64,14 @@ return true;
 
     <body>
 		
-		<div class="accountbg" style="background: url('../assets/images/change-password.jpg');background-size: cover;background-position: center;"></div>
+		<div class="accountbg" style="background: url('../assets/images/change-password.jpg');background-size: cover;background-position: center;"></div>  <!-- background image -->
 		
-        <!-- Begin page -->
+        <!-- page begins here -->
         <div id="wrapper">
-          <?php include_once('includes/sidebar.php');?>
+          <?php include_once('includes/sidebar.php');?> 
             <div class="content-page">
             <?php include_once('includes/header.php');?>
-                <!-- Start Page content -->
+                <!--  page content starts from here -->
                 <div class="content">
                     <div class="container-fluid">
 
@@ -91,8 +91,8 @@ return true;
   }  ?> </p>
 <form class="form-horizontal" role="form" method="post" name="changepassword" onsubmit="return checkpass();">
 <?php
-$userid=$_SESSION['sid'];
-$ret=mysqli_query($con,"select * from tbluser where ID='$userid'");
+$userid=$_SESSION['sid']; 
+$ret=mysqli_query($con,"select * from tbluser where ID='$userid'"); 
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 

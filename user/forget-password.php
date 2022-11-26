@@ -62,7 +62,7 @@ if(isset($_POST['submit']))
                         <div class="card-box p-5">
                             <h3 class="text-uppercase text-center pb-4">
                                 <a href="../index.php">
-                                    <span>VSMS | Recover Password</span>
+                                    <span>Recover Your Password</span>
                                 </a>
                             </h3>
                           <hr color="#000" />
@@ -75,7 +75,7 @@ if(isset($_POST['submit']))
                                 <div class="form-group m-b-20 row">
                                     <div class="col-12">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control" type="email" id="email" name="email" required="" placeholder="Registered Email">
+                                        <input class="form-control" type="email" id="email" name="email" required="" placeholder="Enter Your Email">
                                     </div>
                                 </div>
 

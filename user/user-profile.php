@@ -89,7 +89,7 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
                                     <div class="form-group row">
-            <label class="col-2 col-form-label" for="example-email">Full Name</label>
+            <label class="col-2 col-form-label" for="example-email">First Name</label>
             <div class="col-10">
             <input type="text" id="fullname" name="fullname" class="form-control"  required="true" value="<?php  echo $row['FullName'];?>">
                             </div></div>

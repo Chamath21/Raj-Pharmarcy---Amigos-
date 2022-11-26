@@ -50,7 +50,7 @@ $msg="This email or Contact Number is already been used in another account";
 
 
         <script type="text/javascript">
-function checkpass()
+function checkpass() //function to check whether passowrd and repeat password matches //
 {
 if(document.signup.password.value!=document.signup.repeatpassword.value)
 {
@@ -103,7 +103,7 @@ return true;
                                  <div class="form-group row m-b-20">
                                     <div class="col-12">
                                         <label for="username">Mobile Number</label>
-                                        <input class="form-control" type="text" id="mobilenumber" name="mobilenumber" required="" placeholder="Mobile Number Here" maxlength="10" pattern="[0-9]+" title="Please enter a valid mobile number">
+                                        <input class="form-control" type="text" id="mobilenumber" name="mobilenumber" required="" placeholder="Mobile Number Here" maxlength="10" minlength="10" pattern="[0-9]+" title="Please enter a valid mobile number">
                                     </div>
                                 </div>
                                 

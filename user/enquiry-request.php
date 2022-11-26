@@ -3,9 +3,6 @@ PPA Project - Amigos
 Online Ordering System Website 
 
 <?php
-
-
-
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
@@ -22,7 +19,7 @@ if(isset($_POST['submit']))
      
      $query=mysqli_query($con,"insert into tblenquiry(UserId,EnquiryNumber,EnquiryType,Description) value('$uid','$enqnumber','$enquirytype','$description')");
     if ($query) {
-echo "<script>alert('Your enquiry is under review.');</script>";
+echo "<script>alert('Your enquiry has been successfully received.');</script>";
  echo "<script>window.location.href ='enquiry-request.php'</script>";
   }
   else

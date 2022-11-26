@@ -63,9 +63,9 @@ if (strlen($_SESSION['sid']==0)) {
 <table class="table table-bordered mg-b-0">
               <thead>
                 <tr>
-                  <th>S.NO</th>
+                  <th>NO</th>
                   <th>Enquiry Number</th>
-                                   <th>Enquiry Date</th>
+                                   <th>Enquiry Submitted Date And Time</th>
                    <th>Action</th>
                 </tr>
               </thead>

@@ -12,6 +12,7 @@ if (strlen($_SESSION['sid']==0)) {
 
 if(isset($_POST['submit']))
   {
+	
     $uid=$_SESSION['sid'];
      $category=$_POST['category'];
      $orderdetails=$_POST['orderdetails'];
@@ -25,7 +26,7 @@ if(isset($_POST['submit']))
      
      $query=mysqli_query($con,"insert into tblorderrequest(UserId,OrderNumber,Category,OrderDetails,PatientAge,PatientAddress,PatientContno,DpDate,DpTime,branch) value('$uid','$ordernumber','$category','$orderdetails','$age','$address','$connumber','$odate','$otime','$branchname')");
     if ($query) {
-    echo "<script>alert('Data has been added successfully.');</script>";
+    echo "<script>alert('Your Order has been received successfully.');</script>";
  echo "<script>window.location.href ='order-request.php'</script>";
   }
   else
@@ -108,7 +109,7 @@ if(isset($_POST['submit']))
                                                     <div class="form-group row">
                                                         <label class="col-2 col-form-label" for="example-email">Details of the Order</label>
                                                         <div class="col-10">
-                                                            <input type="text" id="orderdetails" name="orderdetails" class="form-control" placeholder="Order Details" required="true">
+                                                           <textarea id="orderdetails" name="orderdetails" class="form-control" placeholder="Order Details" required="true"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">

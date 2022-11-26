@@ -13,10 +13,10 @@ if(isset($_POST['login']))
   {
     $emailcon=$_POST['emailcont'];
     $password=md5($_POST['password']);
-    $query=mysqli_query($con,"select ID from tbluser where  (Email='$emailcon' || MobileNo='$emailcon') && Password='$password' ");
+    $query=mysqli_query($con,"select ID from tbluser where  (Email='$emailcon' || MobileNo='$emailcon') && Password='$password' "); // selects the ID of the user which matches the email or phone number and the password//
     $ret=mysqli_fetch_array($query);
     if($ret>0){
-      $_SESSION['sid']=$ret['ID'];
+      $_SESSION['sid']=$ret['ID']; //session is  where ID = session id (sid)//
      header('location:welcome.php');
     }
     else{
@@ -58,7 +58,7 @@ if(isset($_POST['login']))
                                 <a href="../index.php" ><span>Raj Pharmarcy | Login </span></a>
                             </h3>
                             <hr color="#000" />
-                            <p style="font-size:16px; color:red" align="center"> <?php if($msg){
+                            <p style="font-size:16px; color:"red align:center> <?php if($msg){
     echo $msg;
   }  ?> </p>
 

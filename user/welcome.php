@@ -5,7 +5,7 @@ Online Ordering System  -->
 <?php
 session_start();
 error_reporting(0);
-include('includes/dbconnection.php');
+include('includes/dbconnection.php'); //session details//
 if (strlen($_SESSION['sid']==0)) {
   header('location:logout.php');
   } else{
@@ -58,80 +58,32 @@ if (strlen($_SESSION['sid']==0)) {
                                 <div class="card-box">
                                     <h4 class="header-title mb-4">Welcome to Raj Pharmarcy User panel !</h4>
 
-                                    <div class="row">
-                                       
+					<h3 class="header-title mb-3">Hello there! We're currently live on Colombo and Bamba for Delivery's and pickups.</h3>
 
-            <div class="col-sm-6 col-lg-6 col-xl-3">
-                                            <div class="card-box mb-0 widget-chart-two">
-                                                <div class="float-right">
-<?php $query3=mysqli_query($con,"Select ID from tblorderrequest where UserId='$uid'");
-$sercount=mysqli_num_rows($query3);?>
-  <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-   data-fgColor="#2d7bf4" value="<?php echo $sercount;?>" data-skin="tron" data-angleOffset="180"
-  data-readOnly=true data-thickness=".2"/>
-</div>
+					<h3 class="header-title mb-3">Enhance your metabolism, maintain a healthy appetite and minimize cravings with our effective weight management and slimming products.</h3>                                    
 
-<div class="widget-chart-two-content">
-<p class="text-muted mb-0 mt-2">Total Order Requests</p>
-</div>
-</div></div>
+					<h3 class="header-title mb-3">Please navigate yourself through the sidebar for 	Enqiries and Order Information, We will try our best to be in touch with you as soon as possible.</h3>                                    
+                                
+					<br>
+					<br>
+					<br>
+
+					
+					<h3 class="header-title mb-3">Cheers!, and have a wonderful and a blasting day!.</h3>
 
 
-                                    
-<div class="col-sm-6 col-lg-6 col-xl-3">
-<div class="card-box mb-0 widget-chart-two">
-<div class="float-right">
-<?php 
-$uid=$_SESSION['sid'];
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
 
-$query31=mysqli_query($con,"Select ID from tblorderrequest where AdminStatus is null and  UserId='$uid'");
-$newrequest=mysqli_num_rows($query31);
-?>
-<input data-plugin="knob" data-width="80" data-height="80" data-linecap=round data-fgColor="#2d7bf4" value="<?php echo $newrequest;?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".2"/></div>
-<p class="text-muted mb-0 mt-2">New Order Requests</p>
-</div>
+					
+					<h3 class="header-title mb-3">Team @RAJ Pharmarcy.</h3>
+
 
 </div>
- </div>
-
-                                  
-
-<div class="row">
-<div class="col-sm-6 col-lg-6 col-xl-3">
-<div class="card-box mb-0 widget-chart-two">
-<div class="float-right">
-<?php $query32=mysqli_query($con,"Select ID from tblorderrequest where AdminStatus='2' and  UserId='$uid' ");
-$rejectedrequest=mysqli_num_rows($query32);
-?>
-<input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-data-fgColor="#f1556c" value="<?php echo $rejectedrequest;?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".2"/></div>
-                                               
-<div class="widget-chart-two-content">
-<p class="text-muted mb-0 mt-2">Rejected Order Requests</p>
-</div>
-</div></div>
-
-
-<div class="col-sm-6 col-lg-6 col-xl-3">
-<div class="card-box mb-0 widget-chart-two">
-<div class="float-right">
- <?php $query33=mysqli_query($con,"Select ID from tblorderrequest where AdminStatus='3' and  UserId='$uid' ");
-$compsercount=mysqli_num_rows($query33);
-?>
-<input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
-data-fgColor="#0acf97" value="<?php echo $compsercount;?>" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".2"/>
-</div>
-
-<div class="widget-chart-two-content">
-<p class="text-muted mb-0 mt-2">Completed Orders </p>
-</div>
-</div></div>
-
-
-                                  
-                                    </div>
-                                    <!-- end row -->
-                                </div>
                             </div>
                         </div>
 
