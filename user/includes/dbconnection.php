@@ -6,10 +6,10 @@ Online Ordering System -->
 
 <?php
 
-$hostname = "localhost";
-$username = "root@";
-$password = "";
-$db = "raj pharmarcy";
+$hostname = "us-cdbr-east-05.cleardb.net";
+$username = "be74e51f04ea1a";
+$password = "b3d29cb1";
+$db = "heroku_88f964d9f1531d1";
 
 $con = mysqli_connect($hostname, $username, $password, $db); 
 	if (!$con) {
