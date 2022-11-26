@@ -31,7 +31,7 @@ Online Ordering System Website -->
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="user/register.php">Customer Sign up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user/register.php">Customer Sign up</a></li> <!-- Navigation bar -->
                         <li class="nav-item"><a class="nav-link" href="user/index.php">Customer Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="admin/index.php">Admin Panel</a></li>
 
@@ -42,7 +42,7 @@ Online Ordering System Website -->
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-heading text-uppercase">All Your Medical Needs Within Your Reach</div>
+                <div class="masthead-heading text-uppercase">All Your Medical Needs Within Your Reach</div> <!-- Headline text -->
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">What We Provide&nbsp;</a>
             </div>
         </header>
@@ -59,7 +59,7 @@ Online Ordering System Website -->
                             <i class="fas fa-square fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Online Ordering</h4>
+                        <h4 class="my-3">Online Ordering</h4> <!-- Bottom obejcts -->
                 
                     </div>
                     <div class="col-md-4">
@@ -67,7 +67,7 @@ Online Ordering System Website -->
                             <i class="fas fa-square fa-stack-2x text-primary"></i>
                             <i class="fas fa-box fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Order Tracking</h4>
+                        <h4 class="my-3">Order Tracking</h4> <!-- Bottom obejcts -->
         
                     </div>
                     <div class="col-md-4">
@@ -75,7 +75,7 @@ Online Ordering System Website -->
                             <i class="fas fa-square fa-stack-2x text-primary"></i>
                             <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Fast Delivery</h4>
+                        <h4 class="my-3">Fast Delivery</h4> <!-- Bottom obejcts -->
                       
                     </div>
                 </div>
@@ -87,7 +87,7 @@ Online Ordering System Website -->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <a>© Raj Pharmarcies - Online Ordering System  |  @Amigos</a>
+                    <a>© Raj Pharmarcies - Online Ordering System  |  @Amigos</a> <!-- Copyrights -->
             
                 </div>
             </div>
@@ -96,7 +96,7 @@ Online Ordering System Website -->
 
       
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
