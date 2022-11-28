@@ -43,7 +43,7 @@ $name=$row['FullName'];
                             <li>
                                 <a href="javascript: void(0);"><i class="fi-layers"></i><span> Order Enquiry </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="enquiry-request.php">Order Form</a></li>
+                                    <li><a href="enquiry-request.php">Enquiry Form</a></li>
                                     <li><a href="enquiry-history.php">Your Enquiry History</a></li>
                                 </ul>
                             </li>
