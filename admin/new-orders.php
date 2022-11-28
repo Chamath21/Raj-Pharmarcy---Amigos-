@@ -79,8 +79,7 @@ while ($row=mysqli_fetch_array($ret)) {
                 <tr>
                   <td><?php echo $cnt;?></td>
                       <td><?php  echo $row['OrderNumber'];?></td>
-                  <td><?php  echo $row['Category'];?></td>
-                  <td><?php  echo $row['ServiceNumber'];?></td>              
+                  <td><?php  echo $row['Category'];?></td>              
                   <td><?php  echo $row['FullName'];?></td>
                   <td><?php  echo $row['MobileNo'];?></td>
                   <td><?php  echo $row['Email'];?></td>
