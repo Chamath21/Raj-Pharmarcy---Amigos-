@@ -9,7 +9,13 @@ Online Ordering System Website -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Raj Pharmarcy Order System</title>
+        <title>Raj Pharmarcy Order System
+        
+        </title>
+        
+         <link rel = "icon" href = 
+        "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" 
+        type = "image/x-icon">
         
         <link rel="icon" type="image/x-icon" href="" />
         
